@@ -1,8 +1,3 @@
-.usersContainer{
-    position:relative;
-
-
-}
 
 .usersContainer ul{
     list-style: none;
@@ -12,12 +7,20 @@
     display: flex;
     margin-top:25px;
     margin-bottom: 50px;
+    position:relative;
 }
 
 .formContainer input{
     font-family: inherit;
     padding: 6px;
     margin-right: 5px;
+}
+
+.formContainer p {
+    font-weight: bold;
+    color:red;
+    position:absolute;
+    top:75%;
 }
 
 .userBox{

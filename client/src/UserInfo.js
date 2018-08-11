@@ -8,7 +8,8 @@ class UserInfo extends Component{
             name:'',
             email:'',
             phone:'',
-            users:[]
+            users:[],
+            error:false
     }
     componentDidMount(){
         axios.get('/users')
@@ -20,6 +21,15 @@ class UserInfo extends Component{
     }
     
     handleChange(e){
+        //check if the user is typing a number
+        if(e.target.name==='phone'){
+         if(isNaN(e.target.value)){
+            this.setState({error:true}) 
+           }else {
+            this.setState({error:false}) 
+          }
+        }
+     
         this.setState({[e.target.name]:e.target.value})
     }
     
@@ -79,6 +89,7 @@ class UserInfo extends Component{
                             onChange={this.handleChange.bind(this)}
                             name='phone'
                             placeholder='phone number' type="text"/>
+                        {this.state.error && <p>Please insert a Number!!!!</p>}
                         <button type='submit'> Save</button>
                     </form>
                 </div>
