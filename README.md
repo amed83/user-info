@@ -6,6 +6,5 @@
  Once created insert the name : 
 ```
 mongoose.connect(`mongodb://localhost/${dbName}`);
-
 ```
  To run the app: ```npm start```
