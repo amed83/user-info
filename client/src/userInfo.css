@@ -1,0 +1,27 @@
+.usersContainer{
+    position:relative;
+
+
+}
+
+.usersContainer ul{
+    list-style: none;
+}
+
+.formContainer{
+    display: flex;
+    margin-top:25px;
+    margin-bottom: 50px;
+}
+
+.formContainer input{
+    font-family: inherit;
+    padding: 6px;
+    margin-right: 5px;
+}
+
+.userBox{
+    line-height: 1.8;
+    margin-left:-10px;
+    margin-left:-40px;
+}
